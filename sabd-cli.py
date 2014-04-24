@@ -60,7 +60,7 @@ def main():
                 #print (getattr(colored, 'cyan')(line[2])) + "\t", #source
                 #print (getattr(colored, 'cyan')(line[3])) + "\t", # line
                 ##print (getattr(colored, 'red')(line[4])) + "\t", # sabd_id
-                print (getattr(colored, 'blue')(line[5])) + "\t"  # gurmukhi
+                print line[5] + "\t"  # gurmukhi
                 print line[6] + "\t"  #transliteration
                 print (getattr(colored, 'cyan')(line[7])) + "\t"  #english translation
                 print "\n"
