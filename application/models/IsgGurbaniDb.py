@@ -33,7 +33,26 @@ class IsgGurbaniDb:
             raise TypeError('no search string passed in')
 
         cursor = self._connection.cursor()
-        query = "select ID,roman from gurbani where gamma like ?"
+        query = "select ID,shabd,roman from gurbani where gamma like ? order by ID,page,line"
         cursor.execute(query, [input + '%'])
         data = cursor.fetchall()
+        cursor.close()
+        return data
+
+    def get_sabad_by_sabad_id(self, sabad_id):
+        """
+        get a specific sabad by sabad_id
+        @param int the sabad id
+        @return the data
+        """
+
+        if sabad_id == None:
+            raise TypeError('no sabad_id passed in')
+
+        cursor = self._connection.cursor()
+        query = "select ID,page,scrpt,line,shabd,gurmukhi,translit,english from gurbani where shabd=? order by ID,page,line"
+        cursor.execute(query, [sabad_id])
+        data = cursor.fetchall()
+        cursor.close()
+
         return data
