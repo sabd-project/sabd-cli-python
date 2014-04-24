@@ -18,9 +18,9 @@ Options:
 '''
 
 import docopt
-import clint
-import sqlite3
-from models.isg_gurbani_db import Isg_gurbani_db
+
+from application.models import IsgGurbaniDb
+
 
 '''Main entry point for sabd-cli.'''
 
@@ -30,7 +30,7 @@ def main():
 
     if (args['--first-letter-search']):
         print args['--first-letter-search']
-        model_gurbani = Isg_gurbani_db()
+        model_gurbani = IsgGurbaniDb()
 
 
 if __name__ == '__main__':

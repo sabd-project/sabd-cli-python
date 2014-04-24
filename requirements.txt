@@ -1,6 +1,6 @@
-clint
-docopt
-
-
+clint # coloured console output
+docopt # compand line arg magic
+#sqlite3
+nose # for unit testing
 
 

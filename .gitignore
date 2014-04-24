@@ -10,20 +10,11 @@ Session.vim
 .netrwhist
 *~
 
-
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
 
 ## Directory-based project format
 .idea/
-# if you remove the above rule, at least ignore user-specific stuff:
-# .idea/workspace.xml
-# .idea/tasks.xml
-# and these sensitive or high-churn files:
-# .idea/dataSources.ids
-# .idea/dataSources.xml
-# .idea/sqlDataSources.xml
-# .idea/dynamic.xml
 
 ## File-based project format
 *.ipr
@@ -43,20 +34,61 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 
 
-### Scala ###
-*.class
-*.log
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
 
-# sbt specific
-.cache/
-.history/
-.lib/
-dist/*
-target/
-lib_managed/
-src_managed/
-project/boot/
-project/plugins/project/
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
 
 ### Vagrant ###
 .vagrant/
