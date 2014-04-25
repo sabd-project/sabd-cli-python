@@ -26,7 +26,7 @@ Currently we're using the [Search Gurbani](http://searchgurbani.com/sgdv/isg) da
 
 ## TODO
 
-- generate output helpers for openoffice presenter format
+- generate output helpers for libreoffice presenter format
 - use different gurbani databases such as GurbaniCD and SikhiToTheMax
 - have unicode gurmukhi output
 - wrap for windows and OSx
