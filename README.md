@@ -10,6 +10,10 @@ Because:
 
   `sabd-cli -s 2289` to bring all lines of "har jio kirpa karo" back
 
+  `sabd-cli -s 2289 -o html` to bring all lines of "har jio kirpa karo" and render as html
+
+  `sabd-cli -s 2289 -o html` to bring all lines of "har jio kirpa karo" and render as html
+
   `sabd-cli (-h | --help)`
 
 
@@ -19,6 +23,8 @@ Because:
 - use different gurbani databases such as GurbaniCD and SikhiToTheMax
 - have unicode gurmukhi output
 - wrap for windows and OSx
+- have some front end wizzards work on the outputs
+- create an interactive sabad picker
 
 ## Requirements
 

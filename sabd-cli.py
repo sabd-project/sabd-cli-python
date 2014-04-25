@@ -102,6 +102,13 @@ def main():
 
 
 def outputSabadAsFile(file, type, data, html_template_type='revealjs'):
+    """
+    Output sabad as certain filetypes
+    @param file the file object
+    @param string md|html|txt
+    @param dictionary data
+    @param string html template type
+    """
     if type == 'md':
         for line in data:
             file.write("**" + line[5].encode("UTF-8") + "**" + "\n")
