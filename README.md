@@ -2,11 +2,10 @@
 
 [![Build Status](https://travis-ci.org/jujhars13/sabd-cli.svg?branch=master)](https://travis-ci.org/jujhars13/sabd-cli)
 
-Because:
+Why? Because:
 
 1. I need Gurbani on bash
 2. I need to learn Python
-3. We need something cross platform without the [Chintz](http://en.wikipedia.org/wiki/Chintz)
 
 This script is waaaay faster than anything else out there - bGg.
 
