@@ -33,6 +33,7 @@ HTML output uses [Reveal.js](http://lab.hakim.se/reveal-js/) which is way nicer 
 - create an installer
 - create a HTML line navigator for the HTML view
 - allow the switching of html output types
+- implement other search types
 - create a GUI???
 
 ## Screenshots
