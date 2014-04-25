@@ -54,7 +54,8 @@ Currently we're using the [Search Gurbani](http://searchgurbani.com/sgdv/isg) da
 run `sudo pip install -r requirements.txt` to install all deps required for this project
 
 ## Tests
-Using [nose](https://nose.readthedocs.org/en/latest/) as a test framework (see sabd id 51:6).
+Using [nose](https://nose.readthedocs.org/en/latest/) as a test framework (see sabd id 51).
+
 Run `nosetests` in the project root to run the unit tests
 
 ## License
