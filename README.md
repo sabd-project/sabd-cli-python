@@ -16,9 +16,8 @@ Because:
 ## TODO
 
 - generate output helpers for openoffice presenter format
-- create more advanced html outputs such as [revealJS](http://lab.hakim.se/reveal-js/#/) html output version
 - use different gurbani databases such as GurbaniCD and SikhiToTheMax
-- have unicode gurmukhi ouput
+- have unicode gurmukhi output
 - wrap for windows and OSx
 
 ## Requirements
