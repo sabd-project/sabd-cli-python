@@ -31,6 +31,14 @@ HTML output uses [Reveal.js](http://lab.hakim.se/reveal-js/) which is way nicer 
 - have some front end wizzards work on the outputs
 - create an interactive sabad picker
 
+## Screenshots
+
+### Searching for gurbani
+![](https://github.com/jujhars13/sabd-cli/blob/master/screenshot-search.png?raw=true)
+
+### HTML output
+![](https://github.com/jujhars13/sabd-cli/blob/master/screenshot-html-output.png?raw=true)
+
 ## Requirements
 
 - Python 2.7
