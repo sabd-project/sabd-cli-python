@@ -6,7 +6,7 @@ Because:
 2. I need to learn Python
 3. We need something cross platform without the [Chintz](http://en.wikipedia.org/wiki/Chintz)
 
-This script is waaaay faster than anything else out there and should work great.
+This script is waaaay faster than anything else out there - bGg.
 
 HTML output uses [Reveal.js](http://lab.hakim.se/reveal-js/) which is way nicer than some of the STTM ppt output.  The application will fire up your web browser when in html mode
 
@@ -29,14 +29,18 @@ HTML output uses [Reveal.js](http://lab.hakim.se/reveal-js/) which is way nicer 
 - have unicode gurmukhi output
 - wrap for windows and OSx
 - have some front end wizzards work on the outputs
-- create an interactive sabad picker
+- create an interactive CLI based sabd picker
+- create an installer
+- create a HTML line navigator for the HTML view
+- allow the switching of html output types
+- create GUI???
 
 ## Screenshots
 
 ### Searching for gurbani
 ![](https://github.com/jujhars13/sabd-cli/blob/master/screenshot-search.png?raw=true)
 
-### HTML output
+### HTML output using Reveal.js
 ![](https://github.com/jujhars13/sabd-cli/blob/master/screenshot-html-output.png?raw=true)
 
 ## Requirements
@@ -51,7 +55,7 @@ Run `nosetests` in the project root to run the unit tests
 
 ## License
 See the LICENSE file for license rights and limitations (MIT) for the source code.
-The databases may have their own separate license rights and limitations.
+The databases may have their own separate license rights and limitations, youll have to speak to the owners
 
-
-# BGG
+---
+bGg
