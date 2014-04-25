@@ -1,5 +1,7 @@
 # Sabd CLI
 
+[![Build Status](https://travis-ci.org/jujhars13/sabd-cli.svg?branch=master)](https://travis-ci.org/jujhars13/sabd-cli)
+
 Because:
 
 1. I need Gurbani on bash
