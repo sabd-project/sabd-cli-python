@@ -10,7 +10,9 @@ Because:
 
 This script is waaaay faster than anything else out there - bGg.
 
-HTML output uses [Reveal.js](http://lab.hakim.se/reveal-js/) which is way nicer than some of the STTM ppt output.  The application will fire up your web browser when in html mode
+HTML output uses [Reveal.js](http://lab.hakim.se/reveal-js/) which is very nice, please fork and see if you can improve.
+
+The application will fire up your web browser when in html mode so make sure you have a proper (*chrome*) one.
 
 ## Basic Usage
   `sabd-cli.py -f hjkk` to find "har jio kirpa karo" using first letter search
