@@ -18,7 +18,6 @@ Options:
   -f <query>, --first-letter-search <query>     To do a first letter search
   -s <sabad_id>, --sabd <sabad_id>              To bring a specific sabd back
   -o, --output-as txt|html|md                   Output sabd as txt|html|md
-  --file-name <your_filename>                   Where do you want to output to
   -h, --help                                    Show this screen
 '''
 
@@ -42,14 +41,9 @@ def main():
         bootstrap.logger.info("we don't support that file format yet")
         quit()
 
-    if args['--output-as'] and not args['--file-name']:
+    if args['--output-as']:
         output_file = tempfile.NamedTemporaryFile('w+b', -1, "." + args['--output-as'].strip(), 'sabd-', None, False)
         bootstrap.logger.info('output filename has not been specified, will write to ' + str(output_file.name))
-    else:
-        if args['--file-name']:
-            output_file = args['--file-name'].strip()
-        else:
-            output_file = None
 
     model_gurbani = IsgGurbaniDb(bootstrap.config)
     if args['--first-letter-search']:

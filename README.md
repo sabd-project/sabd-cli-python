@@ -17,10 +17,10 @@ HTML output uses [Reveal.js](http://lab.hakim.se/reveal-js/) which is way nicer 
 
   `sabd-cli.py -s 2289 -o html` to bring all lines of "har jio kirpa karo" and render as html to a generated filename
 
-  `sabd-cli.py -s 2289 -o html --file-name=/tmp/myfile.html` to bring all lines of "har jio kirpa karo" and render as html to a filename of your choice
-
   `sabd-cli.py (-h | --help)`
 
+## Database
+Currently we're using the [Search Gurbani](http://searchgurbani.com/sgdv/isg) database, might add other database support later
 
 ## TODO
 
@@ -52,6 +52,7 @@ HTML output uses [Reveal.js](http://lab.hakim.se/reveal-js/) which is way nicer 
 run `sudo pip install -r requirements.txt` to install all deps required for this project
 
 ## Tests
+Using [nose](https://nose.readthedocs.org/en/latest/) as a test framework (see sabd id 51:6).
 Run `nosetests` in the project root to run the unit tests
 
 ## License
