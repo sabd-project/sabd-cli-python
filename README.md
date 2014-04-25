@@ -5,14 +5,18 @@ Because:
     1. I need Gurbani on bash
     2. I need to learn Python
 
+This script is waaaay faster than anything else out there and should work great.
+
+HTML output uses [Reveal.js](http://lab.hakim.se/reveal-js/) which is way nicer than some of the STTM ppt output.  The application will fire up your web browser when in html mode
+
 ## Basic Usage
   `sabd-cli -f hjkk` to find "har jio kirpa karo" using first letter search
 
   `sabd-cli -s 2289` to bring all lines of "har jio kirpa karo" back
 
-  `sabd-cli -s 2289 -o html` to bring all lines of "har jio kirpa karo" and render as html
+  `sabd-cli -s 2289 -o html` to bring all lines of "har jio kirpa karo" and render as html to a generated filename
 
-  `sabd-cli -s 2289 -o html` to bring all lines of "har jio kirpa karo" and render as html
+  `sabd-cli -s 2289 -o html --file-name=/tmp/myfile.html` to bring all lines of "har jio kirpa karo" and render as html to a filename of your choice
 
   `sabd-cli (-h | --help)`
 

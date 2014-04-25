@@ -16,8 +16,8 @@ Examples:
 
 Options:
   -f <query>, --first-letter-search <query>     To do a first letter search
-  -s <sabad_id>, --sabd <sabad_id>              To bring a specific sabad back
-  -o, --output-as txt|html|md                   Output sabad as txt|html|md
+  -s <sabad_id>, --sabd <sabad_id>              To bring a specific sabd back
+  -o, --output-as txt|html|md                   Output sabd as txt|html|md
   --file-name <your_filename>                   Where do you want to output to
   -h, --help                                    Show this screen
 '''
@@ -103,7 +103,7 @@ def main():
 
 def outputSabadAsFile(file, type, data, html_template_type='revealjs'):
     """
-    Output sabad as certain filetypes
+    Output sabd as certain filetypes
     @param file the file object
     @param string md|html|txt
     @param dictionary data
