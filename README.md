@@ -33,7 +33,7 @@ Currently we're using the [Search Gurbani](http://searchgurbani.com/sgdv/isg) da
 - use different gurbani databases such as GurbaniCD and SikhiToTheMax
 - have unicode gurmukhi output
 - wrap for windows and OSx
-- have some front end wizzards work on the outputs
+- have some front end ninjas work on the html outputs
 - create an interactive CLI based sabd picker
 - create an installer
 - create a HTML line navigator for the HTML view
