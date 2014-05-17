@@ -18,7 +18,7 @@ The application will fire up your web browser when in html mode so make sure you
 
   `sabd-cli.py -s 2289` to bring all lines of "har jio kirpa karo" back
 
-  `sabd-cli.py -s 2289 -o html` to bring all lines of "har jio kirpa karo" and render as html in [presentation]((http://lab.hakim.se/reveal-js/) mode
+  `sabd-cli.py -s 2289 -o html` to bring all lines of "har jio kirpa karo" and render as html in [presentation](http://lab.hakim.se/reveal-js/) mode
 
   `sabd-cli.py -s 2289 -o html --html-type line-by-line ` to bring all lines of "har jio kirpa karo" and render as line-by-line html
 
@@ -46,7 +46,7 @@ Currently we're using the [Search Gurbani](http://searchgurbani.com/sgdv/isg) da
 ### Searching for gurbani
 ![](https://github.com/jujhars13/sabd-cli/blob/master/screenshot-search.png?raw=true)
 
-### HTML output using Reveal.js
+### HTML output in presentation mode using Reveal.js
 ![](https://github.com/jujhars13/sabd-cli/blob/master/screenshot-html-output.png?raw=true)
 
 ## Requirements
