@@ -18,7 +18,9 @@ The application will fire up your web browser when in html mode so make sure you
 
   `sabd-cli.py -s 2289` to bring all lines of "har jio kirpa karo" back
 
-  `sabd-cli.py -s 2289 -o html` to bring all lines of "har jio kirpa karo" and render as html to a generated filename
+  `sabd-cli.py -s 2289 -o html` to bring all lines of "har jio kirpa karo" and render as html in [presentation]((http://lab.hakim.se/reveal-js/) mode
+
+  `sabd-cli.py -s 2289 -o html --html-type line-by-line ` to bring all lines of "har jio kirpa karo" and render as line-by-line html
 
   `sabd-cli.py (-h | --help)`
 

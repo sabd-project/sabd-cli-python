@@ -18,6 +18,7 @@ Options:
   -f <query>, --first-letter-search <query>     To do a first letter search
   -s <sabad_id>, --sabd <sabad_id>              To bring a specific sabd back
   -o, --output-as txt|html|md                   Output sabd as txt|html|md
+  --html-template presentation|line-by-line     If html then output as presentation[default] mode or line-by-line
   -h, --help                                    Show this screen
 '''
 
@@ -78,7 +79,11 @@ def main():
 
         if data:
             if args['--output-as']:
-                outputSabadAsFile(output_file, args['--output-as'].strip(), data)
+                if args['--html-template'].strip() == 'line-by-line':
+                    html_mode = 'line-by-line'
+                else:
+                    html_mode = 'presentation'
+                outputSabadAsFile(output_file, args['--output-as'].strip(), data, html_mode)
             else:
                 for line in data:
                     #print (getattr(colored, 'cyan')(line[0])) + "\t", #ID
@@ -95,7 +100,7 @@ def main():
             bootstrap.logger.warn("couldn't find a sabad by " + str(sabd_id))
 
 
-def outputSabadAsFile(file, type, data, html_template_type='revealjs'):
+def outputSabadAsFile(file, type, data, html_template_type='presentation'):
     """
     Output sabd as certain filetypes
     @param file the file object
@@ -116,7 +121,7 @@ def outputSabadAsFile(file, type, data, html_template_type='revealjs'):
         #use jinja templates
         env = Environment(loader=PackageLoader('application', 'views'))
         template = env.get_template(html_template_type + '.html')
-        template_data = {'title': 'Sabad CLI output', 'gurbani': data}
+        template_data = {'title': 'Sabad CLI output [' + html_template_type + ']', 'gurbani': data}
         output = template.render(template_data)
         file.write(output.encode("UTF-8"))
         file.flush()
