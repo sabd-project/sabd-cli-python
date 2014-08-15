@@ -49,6 +49,10 @@ Currently we're using the [Search Gurbani](http://searchgurbani.com/sgdv/isg) da
 ### HTML output in presentation mode using Reveal.js
 ![](https://github.com/jujhars13/sabd-cli/blob/master/screenshot-html-output.png?raw=true)
 
+### Keyboard shortcuts
+- `o` will bring up reveal.js's built in slide overview view
+- `i` will toggle in my dirty 20 min hacked Gurmukhi navigator
+
 ## Requirements
 
 - Python 2.7
