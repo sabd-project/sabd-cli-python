@@ -36,15 +36,10 @@ from application.models.IsgGurbaniDb import IsgGurbaniDb
 def main():
     '''Main entry point for sabd-cli.'''
     args = docopt.docopt(__doc__, help=True, version=None, options_first=False)
-    output_file = None
 
     if args['--output-as'] and args['--output-as'] not in ['md', 'txt', 'html']:
         bootstrap.logger.info("we don't support that file format yet")
         quit()
-
-    if args['--output-as']:
-        output_file = tempfile.NamedTemporaryFile('w+b', -1, "." + args['--output-as'].strip(), 'sabd-', None, False)
-        bootstrap.logger.info('output filename has not been specified, will write to ' + str(output_file.name))
 
     model_gurbani = IsgGurbaniDb(bootstrap.config)
     if args['--first-letter-search']:
@@ -78,15 +73,9 @@ def main():
             bootstrap.logger.critical("There was an issue searching for " + str(sabd_id), e.message)
 
         if data:
-            if args['--output-as']:
-                if args['--html-template'].strip() == 'line-by-line':
-                    html_mode = 'line-by-line'
-                else:
-                    html_mode = 'presentation'
-                outputSabadAsFile(output_file, args['--output-as'].strip(), data, html_mode)
-            else:
+            if args['--output-as'] == 'txt':
                 for line in data:
-                    #print (getattr(colored, 'cyan')(line[0])) + "\t", #ID
+                    # print (getattr(colored, 'cyan')(line[0])) + "\t", #ID
                     #print (getattr(colored, 'cyan')(line[1])) + "\t", #ANG
                     #print (getattr(colored, 'cyan')(line[2])) + "\t", #source
                     #print (getattr(colored, 'cyan')(line[3])) + "\t", # line
@@ -96,6 +85,18 @@ def main():
                     print (getattr(colored, 'cyan')(line[7]))  #english translation
                     print "\n"
                     #print " " + (getattr(colored, 'magenta')line[1].ljust(40)
+            elif args['--output-as'] == 'md':
+                bootstrap.logger.warn("md output no yet implemented")
+            else:  # default is presentation mode html
+                html_mode = 'presentation'
+                if args['--html-template']:
+                    if args['--html-template'].strip() == 'line-by-line':
+                        html_mode = 'line-by-line'
+
+                output_file = tempfile.NamedTemporaryFile('w+b', -1, ".html", 'sabd-', None, False)
+                bootstrap.logger.info('output filename has not been specified, will write to ' + str(output_file.name))
+                outputSabadAsFile(output_file, 'html', data, html_mode)
+
         else:
             bootstrap.logger.warn("couldn't find a sabad by " + str(sabd_id))
 
@@ -118,7 +119,7 @@ def outputSabadAsFile(file, type, data, html_template_type='presentation'):
         file.close()
 
     if type == 'html':
-        #use jinja templates
+        # use jinja templates
         env = Environment(loader=PackageLoader('application', 'views'))
         template = env.get_template(html_template_type + '.html')
         template_data = {'title': 'Sabad CLI output [' + html_template_type + ']', 'gurbani': data}

@@ -9,19 +9,33 @@
     <style>
         {% include 'reveal.css' without context %}
         /* custom styles */
-        p.gurmukhi
+        ul,p.gurmukhi
         {font-family:GurbaniAkhar,GurbaniWebThick;GurbaniAkharHeavy;text-align:center;font-size:230%;padding-bottom:15px}
         p.tranlisteration {text-align:center;font-size:180%;padding-bottom:15px;color:cadetblue}
         p.english_translation {text-align:center;font-size:180%}
         section ul { list-style-type: none; padding-bottom:10px }
+        div.navigator {position: fixed;
+                    width: 310px;
+                    height:600px;
+                    z-index: 99;
+                    left: 1 px;
+                    overflow:auto;}
+        ul.navigator_line {font-size:95%;cursor:pointer;padding-bottom:1px;text-align:left}
     </style>
 </head>
 
 <body>
+<p onclick="toggleElement(document.getElementById('gurmukhi_navigator'))" style="cursor:pointer;margin:0px;font-size:small">nav<span style="text-decoration: underline">I</span>gator</p>
+<div class="navigator" id="gurmukhi_navigator" style="display:none">
+    {% for line in gurbani %}
+        <ul class="navigator_line gurmukhi" data-line_number="{{loop.index0}}" onclick="">{{line[5]}}</ul>
+    {% endfor %}
+</div>
+
 <div class="reveal">
     <div class="slides">
         {% for line in gurbani %}
-        <section>
+        <section data-transition-speed="fast">
             <p class="gurmukhi">{{line[5]}}</p>
 
             <p class="transliteration">{{line[6]}}</p>
@@ -41,6 +55,29 @@
 </div>
 
 <script>
+document.addEventListener('DOMContentLoaded', function(){
+
+    //get each navigator line and attach an event to it so it changes slide on click
+    var elements = document.querySelectorAll('ul.navigator_line');
+    Array.prototype.forEach.call(elements, function(el, i){
+        var line_number=el.dataset.line_number;
+        el.addEventListener('click', function(element){
+            Reveal.slide(line_number);
+            document.getElementById('gurmukhi_navigator').style.display='none';
+        });
+    });
+
+});
+
+function toggleElement(el){
+    if (el.style.display == ''){
+        el.style.display = 'none';
+    }
+    else{
+        el.style.display = ''
+    }
+}
+
 {% include 'reveal.js' without context %}
 </script>
 
