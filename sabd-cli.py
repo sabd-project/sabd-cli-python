@@ -17,7 +17,7 @@ Examples:
 Options:
   -f <query>, --first-letter-search <query>     To do a first letter search
   -s <sabad_id>, --sabd <sabad_id>              To bring a specific sabd back
-  -o, --output-as txt|html|md                   Output sabd as txt|html|md
+  -o, --output-as html|txt|md                   Output sabd as html|txt|md
   --html-template presentation|line-by-line     If html then output as presentation[default] mode or line-by-line
   -h, --help                                    Show this screen
 '''
