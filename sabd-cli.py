@@ -18,7 +18,7 @@ Options:
   -f <query>, --first-letter-search <query>     To do a first letter search
   -s <sabad_id>, --sabd <sabad_id>              To bring a specific sabd back
   -o, --output-as html|txt|md                   Output sabd as html|txt|md
-  --html-template presentation|line-by-line     If html then output as presentation[default] mode or line-by-line
+  --html-template line-by-line|presentation     If html then output as line-by-line[default] mode or presentation
   -h, --help                                    Show this screen
 '''
 
@@ -88,10 +88,10 @@ def main():
             elif args['--output-as'] == 'md':
                 bootstrap.logger.warn("md output no yet implemented")
             else:  # default is presentation mode html
-                html_mode = 'presentation'
+                html_mode = 'line-by-line'
                 if args['--html-template']:
-                    if args['--html-template'].strip() == 'line-by-line':
-                        html_mode = 'line-by-line'
+                    if args['--html-template'].strip() == 'presentation':
+                        html_mode = 'presentation'
 
                 output_file = tempfile.NamedTemporaryFile('w+b', -1, ".html", 'sabd-', None, False)
                 bootstrap.logger.info('output filename has not been specified, will write to ' + str(output_file.name))
@@ -101,7 +101,7 @@ def main():
             bootstrap.logger.warn("couldn't find a sabad by " + str(sabd_id))
 
 
-def outputSabadAsFile(file, type, data, html_template_type='presentation'):
+def outputSabadAsFile(file, type, data, html_template_type='line-by-line'):
     """
     Output sabd as certain filetypes
     @param file the file object
