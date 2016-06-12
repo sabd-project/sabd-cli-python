@@ -6,16 +6,16 @@
 Because I need gurbani on the cli.
 
 Usage:
-  sabd-cli [options] -f <query>
+  sabd-cli [options] -q <query>
   sabd-cli [options] -s <sabd_id>
   sabd-cli (-h | --help)
 
 Examples:
-  sabd-cli -f hjkk <to find "har jio kirpa karo">
+  sabd-cli -q hjkk <to find "har jio kirpa karo">
   sabd-cli -s 2289 <to bring all lines of "har jio kirpa karo" back>
 
 Options:
-  -f <query>, --first-letter-search <query>     To do a first letter search
+  -q <query>, --first-letter-search <query>     To do a first letter search
   -s <sabad_id>, --sabd <sabad_id>              To bring a specific sabd back
   -o, --output-as html|txt|md                   Output sabd as html|txt|md
   --html-template line-by-line|presentation     If html then output as line-by-line[default] mode or presentation

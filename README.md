@@ -14,7 +14,7 @@ HTML output uses [Reveal.js](http://lab.hakim.se/reveal-js/) which is very nice,
 The application will fire up your web browser when in html mode so make sure you have a proper (*chrome*) one.
 
 ## Basic Usage
-  `sabd-cli.py -f hjkk` to find "har jio kirpa karo" using first letter search
+  `sabd-cli.py -f/q hjkk` to find "har jio kirpa karo" using first letter search
 
   `sabd-cli.py -s 2289` to bring all lines of "har jio kirpa karo" back
 
