@@ -55,8 +55,8 @@ def main():
             print (getattr(colored, 'red')("sabd_id") + "\t")
             print ("Gurmukhi" + "\t")
             for line in data:
-                print (getattr(colored, 'red')(line[1]) + "\t")
-                print (line[2] + "\t")
+                print (getattr(colored, 'red')(line[1]) + " " + line[2] + "\t")
+
         else:
             bootstrap.logger.warn("couldn't find any sabds with first letter search: " + query)
 
