@@ -88,10 +88,10 @@ def main():
             elif args['--output-as'] == 'md':
                 bootstrap.logger.warn("md output no yet implemented")
             else:  # default is presentation mode html
-                html_mode = 'line-by-line'
+                html_mode = 'presentation'
                 if args['--html-template']:
-                    if args['--html-template'].strip() == 'presentation':
-                        html_mode = 'presentation'
+                    if args['--html-template'].strip() == 'line-by-line':
+                        html_mode = 'line-by-line'
 
                 output_file = tempfile.NamedTemporaryFile(mode='w+b', buffering=-1, encoding=None, newline=None, suffix='.html', prefix='sabd-cli-', dir=None, delete=False)
                 bootstrap.logger.info('output filename has not been specified, will write to ' + str(output_file.name))
