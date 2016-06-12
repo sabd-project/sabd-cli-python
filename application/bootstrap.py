@@ -3,7 +3,7 @@
 '''
 __author__ = 'jujhar'
 
-from ConfigParser import SafeConfigParser
+import configparser
 import logging
 import os.path
 
@@ -24,7 +24,6 @@ logger = logging.getLogger(__name__)
 # add the handlers to the logger
 logger.addHandler(handler)
 
-config = SafeConfigParser()
+config = configparser.ConfigParser()
 config.read(os.path.join(APPLICATION_PATH, 'application/config/config.ini'))
 config.set('production', 'APPLICATION_PATH', APPLICATION_PATH)
-

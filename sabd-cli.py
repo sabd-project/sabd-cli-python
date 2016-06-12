@@ -5,7 +5,7 @@
 
 Because I need gurbani on the cli.
 
-Usage: 
+Usage:
   sabd-cli [options] -f <query>
   sabd-cli [options] -s <sabd_id>
   sabd-cli (-h | --help)
@@ -52,11 +52,11 @@ def main():
             bootstrap.logger.critical("There was an issue searching for " + query, e.message)
 
         if data:
-            print (getattr(colored, 'red')("sabd_id")) + "\t",
-            print "Gurmukhi" + "\t"
+            print (getattr(colored, 'red')("sabd_id") + "\t")
+            print ("Gurmukhi" + "\t")
             for line in data:
-                print (getattr(colored, 'red')(line[1])) + "\t",
-                print line[2] + "\t"
+                print (getattr(colored, 'red')(line[1]) + "\t")
+                print (line[2] + "\t")
         else:
             bootstrap.logger.warn("couldn't find any sabds with first letter search: " + query)
 
@@ -80,10 +80,10 @@ def main():
                     #print (getattr(colored, 'cyan')(line[2])) + "\t", #source
                     #print (getattr(colored, 'cyan')(line[3])) + "\t", # line
                     ##print (getattr(colored, 'red')(line[4])) + "\t", # sabd_id
-                    print line[5]  # gurmukhi
-                    print line[6]  #transliteration
+                    print (line[5])  # gurmukhi
+                    print (line[6])  #transliteration
                     print (getattr(colored, 'cyan')(line[7]))  #english translation
-                    print "\n"
+                    print ("\n")
                     #print " " + (getattr(colored, 'magenta')line[1].ljust(40)
             elif args['--output-as'] == 'md':
                 bootstrap.logger.warn("md output no yet implemented")
@@ -93,7 +93,7 @@ def main():
                     if args['--html-template'].strip() == 'presentation':
                         html_mode = 'presentation'
 
-                output_file = tempfile.NamedTemporaryFile('w+b', -1, ".html", 'sabd-', None, False)
+                output_file = tempfile.NamedTemporaryFile(mode='w+b', buffering=-1, encoding=None, newline=None, suffix='.html', prefix='sabd-cli-', dir=None, delete=False)
                 bootstrap.logger.info('output filename has not been specified, will write to ' + str(output_file.name))
                 outputSabadAsFile(output_file, 'html', data, html_mode)
 
@@ -144,4 +144,3 @@ def outputSabadAsFile(file, type, data, html_template_type='line-by-line'):
 
 if __name__ == '__main__':
     main()
-
