@@ -52,10 +52,10 @@ def main():
             bootstrap.logger.critical("There was an issue searching for " + query, e.message)
 
         if data:
-            print (getattr(colored, 'red')("sabd_id") + "\t")
-            print ("Gurmukhi" + "\t")
+            print (getattr(colored, 'yellow')("sabd_id") + " " + "Gurmukhi")
+            print (getattr(colored, 'red')("----------------"))
             for line in data:
-                print (getattr(colored, 'red')(line[1]) + " " + line[2] + "\t")
+                print (getattr(colored, 'yellow')(line[1]) + " " + line[2] + "\t")
 
         else:
             bootstrap.logger.warn("couldn't find any sabds with first letter search: " + query)
