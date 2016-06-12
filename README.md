@@ -55,10 +55,12 @@ Currently we're using the [Search Gurbani](http://searchgurbani.com/sgdv/isg) da
 
 ## Requirements
 
-- Python 2.7
+- Python 3.5
 
-### Ubuntu/Fedora
-run `sudo pip install -r requirements.txt` to install all deps required for this project
+run `pip install -r requirements.txt` to install all deps required for this project
+
+### Windows
+You may need to set the `set PYTHONIOENCODING=utf-8` env variable for unicode to work on Windows console
 
 ## Tests
 Using [nose](https://nose.readthedocs.org/en/latest/) as a test framework (see sabd id 51).
